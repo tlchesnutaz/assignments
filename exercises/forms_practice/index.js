@@ -5,7 +5,7 @@ const form = document["my_form"]
 form.addEventListener("submit", function(event){
     event.preventDefault()
 
-// create variables that contain thei user input using the name attribute of the input element    
+// create variables that contain the user input using the name attribute of the input element    
     const firstName = form.firstName.value
         const lastName = form.lastName.value
 
@@ -52,4 +52,3 @@ form.addEventListener("submit", function(event){
 // Submit events automaticalyy refresh the page - we don't want this bc we will lose all the info on the form.
 // With any form the first thing is to prevent this with the preventDefault() on the event object.
 // give the input a name so that it can be directly accessed 
-// line 9 then clears the box

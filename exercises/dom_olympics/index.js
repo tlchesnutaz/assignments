@@ -1,9 +1,7 @@
 const form = document['message']
 
-// prevent default auto refresh for form (new message input)
-form.addEventListener('submit', function(event){
-    event.preventDefault
-})
+
+
 
 // select header and edit display properties
 var header = document.getElementById("header");
@@ -33,6 +31,8 @@ label.setAttribute('id', "label");
 document.body.insertBefore(subTitle, label);
 subTitle.style.textAlign = "center";
 subTitle.prepend(span);
+
+
 
 // select messages and change the text
 var text= document.getElementsByClassName("message left");
@@ -78,26 +78,33 @@ function changeTheme () {
     }
 }
 
-// select new message input and send button and add functionality
-//var input = document.getElementById("input");
-//var send = document.querySelector("button");
-//send.setAttribute("id", "button");
 
-//const newMessage = form.input.value;
-//const send = document.getElementById('input');
-//send.addEventListener('click', inputNew);
+// prevent default auto refresh for form (new message input)
+form.addEventListener('submit', function(event){
+    event.preventDefault()
 
-// empty the input on submit
-//form.input.value = '';
+// select new message input give it a name so you can select it
+var input = document.getElementById("input");
+input.setAttribute("name", "newMessage")
+
+// get value from input
+const newMessage = form.newMessage.value
+console.log(newMessage)
+
+text[0].textContent = newMessage
+form.newMessage.value = ""
+
+})
 
 
 
 
-//let i = 0 ???
 //function inputNew () {
-//   text[0].textContent = newMessage.value
+// for (i = 0; i < ???; i++) {
+// if (i % 2 === 0)    
+//text[0].textContent = newMessage.value
 //text[1].textContent = ""; 
 //text2[0].textContent = "";
 //text2[1].textContent = ""; 
-
+//}
 

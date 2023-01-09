@@ -91,13 +91,18 @@ for (i=0; i < peopleArray.length; i++) {
 console.log(namesArr, occupationsArr)
 
 //Gold
+/*
 //1 - can't fiqure out how to just log 0's 
-/*const zeroArr = [];
-console.log(zeroArr)
+var len = 2
+const zeroArr = [];
 
-for (var i = 0; i < zeroArr.length[i]; i++) {
-    for (var j = 0; j < zeroArr.length[j]; j++) {
-        console.log(zeroArr[i][j])  
+///console.log(zeroArr)
+
+for (var i = 0; i < len; i++) {
+    zeroArr[i] = '0'
+    for (var j = 0; j < len; j++) {
+    zeroArr[j] = '0'
     }
 }
+console.log(zeroArr[i][j]) 
 */
